@@ -23,4 +23,7 @@ public interface QuestionDAO {
     @Query("SELECT * FROM questions_table")
     List<Question> getAllQuestions();
 
+    @Query("SELECT * FROM questions_table WHERE id ==:questionId")
+    Question getQuestionById(int questionId);
+
 }
